@@ -20,12 +20,12 @@ export default function Post({ autor, titulo, data, descricao, clamped }) {
 				"max-w-[19.5rem] min-w-[148px] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem]"
 			}>
 			<div className="pb-[12px] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
-				<div className="flex gap-[4px]">
+				<div className="flex gap-[4px] font-normal">
 					<h4>{autor}</h4>
 					<p>•</p>
 					<h4>{formatarData(data)}</h4>
 				</div>
-
+ 
 				<div>
 					<img src={arrow} alt="" />
 				</div>

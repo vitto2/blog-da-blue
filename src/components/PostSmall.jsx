@@ -16,7 +16,7 @@ export default function PostSmall({ autor, titulo, data, descricao, clamped }) {
 	return (
 		<section className="max-w-[9.25rem] border border-[#2500FF] rounded-xl px-2 py-3">
 			<div className="pb-3 flex justify-between items-start text-[#2500FF] font-semibold text-[0.625rem]">
-				<div className="flex flex-wrap items-center gap-1 leading-tight">
+				<div className="flex flex-wrap items-center gap-1 leading-tight font-normal">
 					<span className="whitespace-nowrap">{autor}</span>
 					<span className="mx-[1px]">•</span>
 					<span className="whitespace-nowrap">{formatarData(data)}</span>
