@@ -1,12 +1,12 @@
 import Header from "./components/Header.jsx";
 import Recents from "./components/recents.jsx";
 import AllPosts from "./components/AllPosts.jsx";
-import AddPost from "./components/AddPost.jsx";
+import EditPost from "./components/EditPost.jsx";
+
 export default function App() {
 	return (
 		<>
-			<AddPost />
-			{/* <Header />
+			<Header />
 			<div className="px-[24px]">
 				<div className="w-full">
 					<h1 className="font-figtree text-[2.1875rem] font-bold pt-[2rem] pb-[1.5rem]  text-[#2B2B2B] leading-[120%] ">
@@ -16,9 +16,9 @@ export default function App() {
 					<h2 className="font-semibold text-[.875rem] text-[#2B2B2B] leading-[150%] pb-[.75rem] pt-[12px]">
 						Todos os posts
 					</h2>
-					<AllPosts/>
+					<AllPosts />
 				</div>
-			</div> */}
+			</div>
 		</>
 	);
 }
