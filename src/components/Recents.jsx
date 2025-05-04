@@ -11,8 +11,12 @@ function Recents() {
 			.then((res) => res.json())
 			.then((data) => {
 				const sorted = data.sort((a, b) => {
-					const dateA = new Date(a.data_publicacao.split("/").reverse().join("-"));
-					const dateB = new Date(b.data_publicacao.split("/").reverse().join("-"));
+					const dateA = new Date(
+						a.data_publicacao.split("/").reverse().join("-")
+					);
+					const dateB = new Date(
+						b.data_publicacao.split("/").reverse().join("-")
+					);
 					return dateB - dateA;
 				});
 
@@ -22,8 +26,8 @@ function Recents() {
 	}, []);
 
 	return (
-		<div className="px-[24px]">
-			<h2 className="font-semibold text-[.875rem] text-[#2B2B2B] leading-[150%] pb-[.75rem]">
+		<div className="">
+			<h2 className="font-semibold  text-[.875rem] text-[#2B2B2B] leading-[150%] pb-[.75rem]">
 				Posts recentes
 			</h2>
 
