@@ -1,8 +1,7 @@
 import Header from "./components/Header.jsx";
 import Recents from "./components/recents.jsx";
 import AllPosts from "./components/AllPosts.jsx";
-import EditPost from "./components/EditPost.jsx";
-import ViewPost from "./components/ViewPost.jsx";
+
 
 export default function App() {
 	return (
