@@ -2,6 +2,7 @@ import arrow from "../assets/img/arrow_outward.svg";
 import editIcon from "../assets/img/edit-button_mobile.svg";
 import delet from "../assets/img/delete-button.svg";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 	function formatarData(dataStr) {
@@ -14,11 +15,17 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 			year: "numeric",
 		});
 	}
+	function onSeePostClick() {
+		navigate(`/visualizar-post`);
+	}
 
+	function onEditPostClick() {
+		navigate("/editar-post");
+	}
+	const navigate = useNavigate();
 	return (
-		<div>
+		<div className="">
 			<section className="flex flex-col min-w-[19.5rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:h-[17.5rem] xl:max-w-[22.12rem] xl:h-[22.37rem]">
-
 				<div className="pb-[.75rem] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
 					<div className="flex gap-[.25rem] font-normal md:text-[.875rem]">
 						<h4>{autor}</h4>
@@ -26,7 +33,12 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 						<h4>{formatarData(data)}</h4>
 					</div>
 
-					<img src={arrow} alt="" />
+					<img
+						onClick={onSeePostClick}
+						src={arrow}
+						alt=""
+						className="cursor-pointer"
+					/>
 				</div>
 
 				<div>
@@ -43,8 +55,13 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 				</div>
 
 				<div className="mt-auto flex pt-[1.5rem] justify-end gap-2">
-					<img src={editIcon} alt="Editar" />
-					<img src={delet} alt="Excluir" />
+					<img
+						onClick={onEditPostClick}
+						src={editIcon}
+						alt="Editar"
+						className="cursor-pointer"
+					/>
+					<img src={delet} alt="Excluir" className="cursor-pointer" />
 				</div>
 			</section>
 		</div>

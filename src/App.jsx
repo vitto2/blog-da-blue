@@ -4,6 +4,7 @@ import AllPosts from "./components/AllPosts.jsx";
 import Button from "./components/Button.jsx";
 import ViewPost from "./components/ViewPost.jsx";
 
+
 export default function App() {
 	return (
 		<>
