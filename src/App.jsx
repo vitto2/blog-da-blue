@@ -8,7 +8,7 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<div className="w-full px-[1.5rem] xl:px-[12.75rem] md:px-[50px] flex justify-center items-center">
+			<div className="w-full px-[1.5rem] xl:px-[12.75rem] flex justify-center items-center">
 				<div>
 					<h1 className="font-figtree text-[2.18rem] font-bold pt-[2rem] pb-[1.5rem]  text-[#2B2B2B] leading-[120%] xl:text-[96px] ">
 						Blog da Blue
