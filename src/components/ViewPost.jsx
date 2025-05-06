@@ -1,14 +1,16 @@
 import React from "react";
 import Header from "./Header";
 import editIcon from "../assets/img/edit-button_mobile.svg"; // ajuste o path conforme seu projeto
+import { useNavigate } from "react-router-dom";
 
 export default function PostView({
 	titulo = "Top 10 Screams do Cinema",
 	autor = "Bruno Almeida",
 	dataPublicacao = "30/03/2025",
 	descricao = "Gritos são uma marca registrada do terror. Neste ranking, listamos as 10 performances de grito mais memoráveis da história do cinema de horror. Desde o clássico 'Psycho' até filmes modernos, analisamos a entrega dos atores e como esse elemento sonoro impacta diretamente a experiência do espectador.",
-	onEdit,
 }) {
+	const navigate = useNavigate();
+
 	function formatarData(d) {
 		if (typeof d !== "string" || !d.includes("/")) return "";
 		const [dia, mes, ano] = d.split("/");
@@ -19,6 +21,9 @@ export default function PostView({
 		});
 	}
 
+	function onEditPostClick() {
+		navigate("/editar-post");
+	}
 	return (
 		<div className="flex flex-col w-full min-h-screen">
 			<Header returnBtn />
@@ -30,7 +35,7 @@ export default function PostView({
 							{titulo}
 						</h1>
 						<button
-							onClick={onEdit}
+							onClick={onEditPostClick}
 							className="absolute right-0 top-[0.125rem]">
 							<img src={editIcon} alt="Editar" />
 						</button>

@@ -5,6 +5,8 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
 export default function PostAll({ autor, titulo, data, descricao, clamped }) {
+	const navigate = useNavigate();
+
 	function formatarData(dataStr) {
 		const [dia, mes, ano] = dataStr.split("/");
 		const parsed = new Date(`${ano}-${mes}-${dia}`);
@@ -18,11 +20,11 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 	function onSeePostClick() {
 		navigate(`/visualizar-post`);
 	}
-
+	
 	function onEditPostClick() {
 		navigate("/editar-post");
 	}
-	const navigate = useNavigate();
+
 	return (
 		<div className="">
 			<section className="flex flex-col min-w-[19.5rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:h-[17.5rem] xl:max-w-[22.12rem] xl:h-[22.37rem]">
