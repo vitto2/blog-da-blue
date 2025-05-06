@@ -34,7 +34,7 @@ export default function AllPosts() {
 
 	return (
 		<div>
-			<ul className="flex flex-col gap-[.75rem] md:flex-row">
+			<ul className="flex flex-col gap-[.75rem] md:flex-row justify-between">
 				{currentPosts.map((post, index) => (
 					<li key={index}>
 						<PostAll

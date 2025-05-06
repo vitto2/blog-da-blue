@@ -8,22 +8,23 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<div className="px-[1.5rem] xl:px-[12.75rem] md:px-[50px] ">
-				<div className="w-full">
+			<div className="w-full px-[1.5rem] xl:px-[12.75rem] md:px-[50px] flex justify-center items-center">
+				<div>
 					<h1 className="font-figtree text-[2.18rem] font-bold pt-[2rem] pb-[1.5rem]  text-[#2B2B2B] leading-[120%] xl:text-[96px] ">
 						Blog da Blue
 					</h1>
 					<Recents />
 					<div className="flex flex-col gap-[2rem]">
-						<div className="flex justify-between items-center mt-[4.68rem]">
-							<h2 className="font-semibold text-[.875rem] md:text-[1.5rem] text-[#2B2B2B] leading-[150%]">
-								Todos os posts
-							</h2>
+						<div className="flex justify-between mt-[4.68rem] flex-col">
+							<div className="flex justify-between mb-[2rem]">
+								<h2 className="font-semibold text-[.875rem] md:text-[1.5rem] text-[#2B2B2B] leading-[150%]">
+									Todos os posts
+								</h2>
+								<Button title="Adicionar post" />
+							</div>
 
-							<Button title="Adicionar post" />
+							<AllPosts />
 						</div>
-
-						<AllPosts />
 					</div>
 				</div>
 			</div>

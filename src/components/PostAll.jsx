@@ -1,10 +1,9 @@
 import arrow from "../assets/img/arrow_outward.svg";
 import editIcon from "../assets/img/edit-button_mobile.svg";
 import delet from "../assets/img/delete-button.svg";
+import Button from "./Button";
 
 export default function PostAll({ autor, titulo, data, descricao, clamped }) {
-
-	
 	function formatarData(dataStr) {
 		const [dia, mes, ano] = dataStr.split("/");
 		const parsed = new Date(`${ano}-${mes}-${dia}`);
@@ -17,35 +16,34 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 	}
 
 	return (
-		<section className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:h-[17.5rem] xl:max-w-[354px] xl:max-h-[21.90rem]">
+		<div>
+			<section className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:h-[17.5rem] xl:max-w-[354px] xl:max-h-[21.90rem]">
+				<div className="pb-[.75rem] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
+					<div className="flex gap-[.25rem] font-normal">
+						<h4>{autor}</h4>
+						<span>•</span>
+						<h4>{formatarData(data)}</h4>
+					</div>
 
-			<div className="pb-[.75rem] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
-				<div className="flex gap-[.25rem] font-normal">
-					<h4>{autor}</h4>
-					<span>•</span>
-					<h4>{formatarData(data)}</h4>
+					<img src={arrow} alt="" />
 				</div>
 
-				<img src={arrow} alt="" />
-			</div>
+				<div>
+					<p className="mb-[.75rem] text-[#2B2B2B] text-[.875rem]">{titulo}</p>
 
-			
-			<div>
-				<p className="mb-[.75rem] text-[#2B2B2B] text-[.875rem]">{titulo}</p>
+					<p
+						className={`text-[#7A8A9D] leading-[150%] text-[.75rem] ${
+							clamped ? "line-clamp-5" : ""
+						}`}>
+						{descricao}
+					</p>
+				</div>
 
-				<p
-					className={`text-[#7A8A9D] leading-[150%] text-[.75rem] ${
-						clamped ? "line-clamp-5" : ""
-					}`}>
-					{descricao}
-				</p>
-			</div>
-
-			
-			<div className="flex pt-[1.5rem] justify-end gap-2">
-				<img src={editIcon} alt="Editar" />
-				<img src={delet} alt="Excluir" />
-			</div>
-		</section>
+				<div className="flex pt-[1.5rem] justify-end gap-2">
+					<img src={editIcon} alt="Editar" />
+					<img src={delet} alt="Excluir" />
+				</div>
+			</section>
+		</div>
 	);
 }
