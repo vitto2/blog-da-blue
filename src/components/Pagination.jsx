@@ -23,7 +23,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 					key={page}
 					onClick={() => onPageChange(page)}
 					aria-current={page === currentPage ? "page" : undefined}
-					className={`w-8 h-8 grid place-content-center  text-sm transition ${
+					className={`w-8 h-8 grid place-content-center text-sm transition ${
 						page === currentPage
 							? "bg-[#F9F5FF] text-[#2500FF] rounded"
 							: " hover:bg-gray-100"

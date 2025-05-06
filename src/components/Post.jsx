@@ -4,10 +4,10 @@ import delet from "../assets/img/delete-button.svg";
 
 export default function Post({ autor, titulo, data, descricao, clamped }) {
 	function formatarData(dataStr) {
-		const [dia, mes, ano] = dataStr.split("/"); // "21/08/2024"
-		const data = new Date(`${ano}-${mes}-${dia}`);
+		const [dia, mes, ano] = dataStr.split("/"); // ex.: "21/08/2024"
+		const parsed = new Date(`${ano}-${mes}-${dia}`);
 
-		return data.toLocaleDateString("pt-BR", {
+		return parsed.toLocaleDateString("pt-BR", {
 			day: "2-digit",
 			month: "short",
 			year: "numeric",
@@ -16,34 +16,34 @@ export default function Post({ autor, titulo, data, descricao, clamped }) {
 
 	return (
 		<section
-			className={
-				"max-w-[19.5rem] min-w-[148px] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem]"
-			}>
+			className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem]
+                 md:max-w-[34.25rem] md:h-[23.75rem] xl:max-w-[34.25rem] xl:max-h-[36.375rem]">
 			<div className="pb-[12px] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
 				<div className="flex gap-[4px] font-normal">
 					<h4>{autor}</h4>
-					<p>•</p>
+					<span>•</span>
 					<h4>{formatarData(data)}</h4>
 				</div>
- 
-				<div>
-					<img src={arrow} alt="" />
-				</div>
+
+				<img src={arrow} alt="" />
 			</div>
+
+			{/* Corpo */}
 			<div>
-				<p className="mb-[12px] text-[#2B2B2B] text-[.875rem] line-clamp-2">
-					{titulo}
-				</p>
+				<p className="mb-[12px] text-[#2B2B2B] text-[.875rem]">{titulo}</p>
+
 				<p
 					className={`text-[#7A8A9D] leading-[150%] text-[.75rem] ${
-						clamped ? "line-clamp-3" : ""
+						clamped ? "line-clamp-6 md:line-clamp-none" : ""
 					}`}>
 					{descricao}
 				</p>
 			</div>
-			<div className="flex pt-[1.5rem] justify-end">
-				<img src={editIcon} alt="" />
-				<img src={delet} alt="" />
+
+			{/* Ações */}
+			<div className="flex pt-[1.5rem] justify-end gap-2">
+				<img src={editIcon} alt="Editar" />
+				<img src={delet} alt="Excluir" />
 			</div>
 		</section>
 	);
