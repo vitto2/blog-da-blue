@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import Header from "./Header";
 import ButtonLarge from "./ButtonLarge";
 
@@ -6,9 +6,12 @@ export default function EditPost({
 	titulo = "Top 10 Screams do Cinema",
 	autor = "Bruno Almeida",
 	dataPublicacao = "30/03/2025",
-	descricao = "Gritos são uma marca registrada do terror. Neste ranking, listamos as 10 performances de grito mais memoráveis da história do cinema de horror. Desde o clássico 'Psycho' até filmes modernos, analisamos a entrega dos atores e como esse elemento sonoro impacta diretamente a experiência do espectador.",
+	descricao:
+		descricaoInicial = "Gritos são uma marca registrada do terror. Neste ranking, listamos as 10 performances de grito mais memoráveis da história do cinema de horror. Desde o clássico 'Psycho' até filmes modernos, analisamos a entrega dos atores e como esse elemento sonoro impacta diretamente a experiência do espectador.",
 }) {
-	
+	// estado para o textarea
+	const [descricao, setDescricao] = useState(descricaoInicial);
+
 	function formatarData(d) {
 		const [dia, mes, ano] = d.split("/");
 		return new Date(`${ano}-${mes}-${dia}`).toLocaleDateString("pt-BR", {
@@ -37,8 +40,9 @@ export default function EditPost({
 					<textarea
 						rows={20}
 						value={descricao}
+						onChange={(e) => setDescricao(e.target.value)}
 						placeholder="Digite aqui…"
-						className="flex-1 resize-none overflow-y-auto rounded-xl border border-[#D7F0F6] bg-[#F6F7FB] p-[1rem] text-[0.75rem] leading-relaxed text-[#2B2B2B] placeholder:text-[#7A8A9D] focus:outline-none focus:ring-2 focus:ring-blue-500 md:text-[1rem] md:text-[#2B2B2B] "
+						className="flex-1 resize-none overflow-y-auto rounded-xl border border-[#D7F0F6] bg-[#F6F7FB] p-[1rem] text-[0.75rem] leading-relaxed text-[#2B2B2B] placeholder:text-[#7A8A9D] focus:outline-none focus:ring-2 focus:ring-blue-500 md:text-[1rem] md:text-[#2B2B2B]"
 					/>
 
 					<div className="mt-8 flex gap-[0.75rem] md:justify-end">
