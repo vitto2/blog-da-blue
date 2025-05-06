@@ -15,9 +15,10 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 	}
 
 	return (
-		<section className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] xl:max-w-[354px] xl:max-h-[350px]">
-			<div className="pb-[12px] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
-				<div className="flex gap-[4px] font-normal">
+		<section className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:h-[17.5rem] xl:max-w-[354px] xl:max-h-[21.90rem]">
+
+			<div className="pb-[.75rem] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
+				<div className="flex gap-[.25rem] font-normal">
 					<h4>{autor}</h4>
 					<span>•</span>
 					<h4>{formatarData(data)}</h4>
@@ -26,9 +27,9 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 				<img src={arrow} alt="" />
 			</div>
 
-			{/* Corpo */}
+			
 			<div>
-				<p className="mb-[12px] text-[#2B2B2B] text-[.875rem]">{titulo}</p>
+				<p className="mb-[.75rem] text-[#2B2B2B] text-[.875rem]">{titulo}</p>
 
 				<p
 					className={`text-[#7A8A9D] leading-[150%] text-[.75rem] ${
@@ -38,7 +39,7 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 				</p>
 			</div>
 
-			{/* Ações */}
+			
 			<div className="flex pt-[1.5rem] justify-end gap-2">
 				<img src={editIcon} alt="Editar" />
 				<img src={delet} alt="Excluir" />

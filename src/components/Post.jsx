@@ -4,7 +4,7 @@ import delet from "../assets/img/delete-button.svg";
 
 export default function Post({ autor, titulo, data, descricao, clamped }) {
 	function formatarData(dataStr) {
-		const [dia, mes, ano] = dataStr.split("/"); // ex.: "21/08/2024"
+		const [dia, mes, ano] = dataStr.split("/");
 		const parsed = new Date(`${ano}-${mes}-${dia}`);
 
 		return parsed.toLocaleDateString("pt-BR", {
@@ -15,9 +15,9 @@ export default function Post({ autor, titulo, data, descricao, clamped }) {
 	}
 
 	return (
-		<section
-			className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:max-w-[34.25rem] md:h-[23.75rem] xl:max-w-[34.25rem] xl:max-h-[36.375rem]">
-				
+		<section className="max-w-[19.5rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] xl:h-[25.75rem] md:max-w-[34.25rem] md:h-[23.75rem] xl:max-w-[34.25rem] xl:max-h-[36.375rem]">
+
+
 			<div className="pb-[12px] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
 				<div className="flex gap-[4px] font-normal">
 					<h4>{autor}</h4>
@@ -28,7 +28,6 @@ export default function Post({ autor, titulo, data, descricao, clamped }) {
 				<img src={arrow} alt="" />
 			</div>
 
-			{/* Corpo */}
 			<div>
 				<p className="mb-[12px] text-[#2B2B2B] text-[.875rem]">{titulo}</p>
 
@@ -40,7 +39,6 @@ export default function Post({ autor, titulo, data, descricao, clamped }) {
 				</p>
 			</div>
 
-			{/* Ações */}
 			<div className="flex pt-[1.5rem] justify-end gap-2">
 				<img src={editIcon} alt="Editar" />
 				<img src={delet} alt="Excluir" />

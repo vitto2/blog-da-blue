@@ -44,7 +44,6 @@ function Recents() {
 							autor={latestPosts[0].nome}
 							data={latestPosts[0].data_publicacao}
 							descricao={latestPosts[0].descricao}
-							clamped
 						/>
 					}
 				</li>

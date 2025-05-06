@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PostAll from "./PostAll";
 import Pagination from "./Pagination";
+import Button from "./Button";
 
 export default function AllPosts() {
 	const [posts, setPosts] = useState([]);
@@ -33,6 +34,7 @@ export default function AllPosts() {
 
 	return (
 		<div>
+
 			<ul className="flex flex-col gap-[.75rem] md:flex-row">
 				{currentPosts.map((post, index) => (
 					<li key={index}>
@@ -46,7 +48,6 @@ export default function AllPosts() {
 					</li>
 				))}
 			</ul>
-
 			{totalPages > 1 && (
 				<Pagination
 					currentPage={currentPage}

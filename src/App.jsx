@@ -17,6 +17,7 @@ export default function App() {
 							<h2 className="font-semibold text-[.875rem] md:text-[1.5rem] text-[#2B2B2B] leading-[150%] ">
 								Todos os posts
 							</h2>
+
 							<Button title="Adicionar post" />
 						</div>
 

@@ -36,7 +36,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 				<button
 					onClick={() => onPageChange(currentPage + 1)}
 					disabled={currentPage === totalPages}
-					className="xl:pl-[21.125rem] md:pr-[3.125rem] py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
+					className="xl:pl-[21.125rem]  py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
 					Próximo
 				</button>
 				<img src={arrowR} alt="" />
