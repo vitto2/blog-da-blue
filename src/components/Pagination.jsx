@@ -7,13 +7,13 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 
 	return (
 		<nav className="flex items-center justify-between mt-8 mb-[4.375rem] text-[#7A8A9D] ">
-			<div className="flex items-center">
+			<div className="flex items-center gap-[.5rem]">
 				<img src={arrowL} alt="" />
 
 				<button
 					onClick={() => onPageChange(currentPage - 1)}
 					disabled={currentPage === 1}
-					className="px-3 py-1 text-sm disabled:opacity-40 text-[.75rem]">
+					className="xl:pr-[21.125rem] md:pr-[3.125rem] py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
 					Anterior
 				</button>
 			</div>
@@ -32,11 +32,11 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 				</button>
 			))}
 
-			<div className="flex items-center">
+			<div className="flex items-center gap-[.5rem]">
 				<button
 					onClick={() => onPageChange(currentPage + 1)}
 					disabled={currentPage === totalPages}
-					className="px-2 py-1 text-sm disabled:opacity-40">
+					className="xl:pl-[21.125rem] md:pr-[3.125rem] py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
 					Próximo
 				</button>
 				<img src={arrowR} alt="" />
