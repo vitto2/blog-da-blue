@@ -34,7 +34,6 @@ export default function AllPosts() {
 
 	return (
 		<div>
-
 			<ul className="flex flex-col gap-[.75rem] md:flex-row">
 				{currentPosts.map((post, index) => (
 					<li key={index}>
@@ -55,7 +54,6 @@ export default function AllPosts() {
 					onPageChange={(page) => {
 						if (page < 1 || page > totalPages) return;
 						setCurrentPage(page);
-						window.scrollTo({ top: 0, behavior: "smooth" });
 					}}
 				/>
 			)}

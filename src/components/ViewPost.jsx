@@ -22,7 +22,7 @@ export default function ViewPost({
 		<div className="flex min-h-screen flex-col">
 			<Header returnBtn />
 
-			<main className="flex-1 px-[1.5rem] pt-[2rem] pb-[2rem] md:px-[3.125rem]">
+			<main className="flex-1 px-[1.5rem] pt-[2rem] pb-[2rem] md:px-[3.125rem] xl:px-[12.75rem]">
 				<div className="relative mb-[0.75rem]">
 					<h1 className="text-xl font-semibold md:text-[2.18rem]">{titulo}</h1>
 

@@ -3,8 +3,10 @@ import editIcon from "../assets/img/edit-button_mobile.svg";
 import delet from "../assets/img/delete-button.svg";
 
 export default function PostAll({ autor, titulo, data, descricao, clamped }) {
+
+	
 	function formatarData(dataStr) {
-		const [dia, mes, ano] = dataStr.split("/"); // ex.: "21/08/2024"
+		const [dia, mes, ano] = dataStr.split("/");
 		const parsed = new Date(`${ano}-${mes}-${dia}`);
 
 		return parsed.toLocaleDateString("pt-BR", {

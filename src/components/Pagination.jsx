@@ -11,6 +11,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 				<img src={arrowL} alt="" />
 
 				<button
+					type="button"
 					onClick={() => onPageChange(currentPage - 1)}
 					disabled={currentPage === 1}
 					className="xl:pr-[21.125rem] md:pr-[3.125rem] py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
@@ -23,6 +24,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 					key={page}
 					onClick={() => onPageChange(page)}
 					aria-current={page === currentPage ? "page" : undefined}
+					type="button"
 					className={`w-8 h-8 grid place-content-center text-sm transition ${
 						page === currentPage
 							? "bg-[#F9F5FF] text-[#2500FF] rounded"
@@ -34,6 +36,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 
 			<div className="flex items-center gap-[.5rem]">
 				<button
+					type="button"
 					onClick={() => onPageChange(currentPage + 1)}
 					disabled={currentPage === totalPages}
 					className="xl:pl-[21.125rem]  py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
