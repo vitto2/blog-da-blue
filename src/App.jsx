@@ -2,10 +2,14 @@ import Header from "./components/Header.jsx";
 import Recents from "./components/Recents.jsx";
 import AllPosts from "./components/AllPosts.jsx";
 import Button from "./components/Button.jsx";
-import ViewPost from "./components/ViewPost.jsx";
-
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
+	const navigate = useNavigate();
+	function onCreatePostClick() {
+		navigate(`/adicionar-post`);
+	}
+
 	return (
 		<>
 			<Header />
@@ -21,7 +25,7 @@ export default function App() {
 								<h2 className="font-semibold text-[.875rem] md:text-[1.5rem] text-[#2B2B2B] leading-[150%]">
 									Todos os posts
 								</h2>
-								<Button title="Adicionar post" />
+								<Button title="Adicionar post" onClick={onCreatePostClick} />
 							</div>
 
 							<AllPosts />
