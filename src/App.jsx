@@ -2,16 +2,16 @@ import Header from "./components/Header.jsx";
 import Recents from "./components/Recents.jsx";
 import AllPosts from "./components/AllPosts.jsx";
 import Button from "./components/Button.jsx";
-import EditPost from "./components/EditPost.jsx";
+import ViewPost from "./components/ViewPost.jsx";
 
 export default function App() {
 	return (
 		<>
-			<EditPost
+			<ViewPost
 				autor="Bruno Almeida"
 				titulo="Top 10 Screams do Cinema"
 				dataPublicacao="30/03/2025"
-				descricao="Gritos são uma marca registrada do terror. Neste ranking, listamos as 10 performances de grito mais memoráveis da história do cinema de horror. Desde o clássico 'Psycho' até filmes modernos, analisamos a entrega dos atores e como esse elemento sonoro impacta diretamente a experiência do espectador."
+				conteudo="Gritos são uma marca registrada do terror. Neste ranking, listamos as 10 performances de grito mais memoráveis da história do cinema de horror. Desde o clássico 'Psycho' até filmes modernos, analisamos a entrega dos atores e como esse elemento sonoro impacta diretamente a experiência do espectador."
 			/>
 			{/* <Header />
 			<div className="px-[1.5rem] xl:px-[12.75rem] md:px-[50px] ">

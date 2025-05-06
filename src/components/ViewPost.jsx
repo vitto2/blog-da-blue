@@ -22,18 +22,16 @@ export default function ViewPost({
 		<div className="flex min-h-screen flex-col">
 			<Header returnBtn />
 
-			<main className="flex-1 px-[1.5rem] pt-[2rem] pb-[2rem]">
+			<main className="flex-1 px-[1.5rem] pt-[2rem] pb-[2rem] md:px-[3.125rem]">
 				<div className="relative mb-[0.75rem]">
-					<h1 className="text-xl font-semibold">{titulo}</h1>
+					<h1 className="text-xl font-semibold md:text-[2.18rem]">{titulo}</h1>
 
-					<button
-						onClick={onEdit}
-						className="absolute right-0 top-[0.125rem]">
+					<button onClick={onEdit} className="absolute right-0 top-[0.125rem]">
 						<img src={editIcon} alt="Editar" />
 					</button>
 				</div>
 
-				<div className="pb-[12px] flex gap-[4px] items-center text-[.75rem] text-[#2500FF] font-semibold">
+				<div className="pb-[.75rem] flex gap-[4px] items-center text-[.75rem] text-[#2500FF] font-semibold md:pb-[2rem] md:font-semibold md:text-[.875rem]">
 					<h4 className="font-semibold">{autor}</h4>
 					<span>•</span>
 					<h4>{formatarData(dataPublicacao)}</h4>
@@ -45,7 +43,7 @@ export default function ViewPost({
 					.map((p, i) => (
 						<p
 							key={i}
-							className="mb-[1rem] text-[0.75rem] leading-relaxed text-[#2B2B2B]">
+							className="mb-[1rem] text-[0.75rem] leading-relaxed text-[#2B2B2B] md:text-[1rem]">
 							{p}
 						</p>
 					))}
