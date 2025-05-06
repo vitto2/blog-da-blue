@@ -16,7 +16,7 @@ export default function InputText({
 			</label>
 			<input
 				className={clsx(
-					"text-[1rem] text-[#2B2B2B] px-[1rem] py-[.75rem] rounded-xl bg-[#F6F7FB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2500FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6F7FB]",
+					"xl:w-[31.25rem] text-[1rem] text-[#2B2B2B] px-[1rem] py-[.75rem] rounded-xl bg-[#F6F7FB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2500FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6F7FB]",
 					hasError ? "border-2 border-[#D32F2F]" : "border border-[#D7F0F6]"
 				)}
 				required

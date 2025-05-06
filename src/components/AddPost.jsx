@@ -6,26 +6,33 @@ import InputText from "./InputText";
 export default function AddPost() {
 	return (
 		<div className="w-full">
-			<Header returnBtn/>
-			<section className="px-[1.5rem] pt-[3rem] text-[#2B2B2B] md:px-[50px]">
+			<Header returnBtn />
+			<section className="px-[1.5rem] pt-[3rem] text-[#2B2B2B] md:px-[50px] xl:px-[12.75rem]">
 				<h1 className="text-[1.5rem] font-semibold pb-[1.5rem] md:text-[2.18rem]">
 					Adicionar Post
 				</h1>
 				<span className="block text-[14px] font-semibold pb-[.5rem] border-b-[2px] border-[#E8EDFF] mb-[1rem] md:text-[1.5rem]">
 					Informações do post
 				</span>
-				<div>
+				<div className="">
+					<div className="xl:flex justify-between ">
+						<InputText
+							label="Nome"
+							placeholder="Insira o nome do autor"
+							type="text"
+						/>
+						<InputText
+							label="Titulo"
+							placeholder="Insira o titulo do post"
+							type="text"
+						/>
+					</div>
+
 					<InputText
-						label="Nome"
-						placeholder="Insira o nome do autor"
-						type="text"
+						label="Data de publicação"
+						type="date"
+						placeholder="testando"
 					/>
-					<InputText
-						label="Titulo"
-						placeholder="Insira o titulo do post"
-						type="text"
-					/>
-					<InputText label="Data de publicação" type="date" placeholder="testando"/>
 					<div>
 						<label className="block font-semibold text-[.875rem] mb-[.5rem] ">
 							Descrição
@@ -36,7 +43,7 @@ export default function AddPost() {
 							rows="8"
 							placeholder="Digite sua descrição detalhada aqui..."></textarea>
 					</div>
-					<div className="flex gap-[12px] mt-[12px]">
+					<div className="flex gap-[12px] mt-[12px] xl:justify-end">
 						<ButtonLarge title="Cancelar" background={"bg-[#8C8A99]"} />
 
 						<ButtonLarge title="Salvar post" background={"bg-[#2500FF]"} />
