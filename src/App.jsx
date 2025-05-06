@@ -6,9 +6,9 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<div className="px-[1.5rem]">
+			<div className="px-[1.5rem] xl:px-[12.75rem]">
 				<div className="w-full">
-					<h1 className="font-figtree text-[2.18rem] font-bold pt-[2rem] pb-[1.5rem]  text-[#2B2B2B] leading-[120%]  ">
+					<h1 className="font-figtree text-[2.18rem] font-bold pt-[2rem] pb-[1.5rem]  text-[#2B2B2B] leading-[120%] xl:text-[96px] ">
 						Blog da Blue
 					</h1>
 					<Recents />

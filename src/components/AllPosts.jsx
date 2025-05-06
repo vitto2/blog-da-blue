@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Post from "./Post";
+import PostAll from "./PostAll";
 import Pagination from "./Pagination";
 
 export default function AllPosts() {
@@ -36,12 +36,12 @@ export default function AllPosts() {
 			<ul className="flex flex-col gap-[.75rem] md:flex-row">
 				{currentPosts.map((post, index) => (
 					<li key={index}>
-						<Post
+						<PostAll
 							titulo={post.titulo}
 							autor={post.nome}
 							data={post.data_publicacao}
 							descricao={post.descricao}
-							clamped={false}
+							clamped
 						/>
 					</li>
 				))}
