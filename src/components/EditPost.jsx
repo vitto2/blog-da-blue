@@ -22,13 +22,13 @@ export default function EditPost({
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col ">
       <Header returnBtn />
 
-      <main className="flex flex-1 flex-col px-[1.5rem] pt-[2rem] pb-8">
-        <h1 className="mb-[0.75rem] text-xl font-semibold">{titulo}</h1>
+      <main className="flex flex-1 flex-col px-[1.5rem] pt-[2rem] pb-8 md:px-[50px]">
+        <h1 className="mb-[0.75rem] text-xl font-semibold md:text-[2.18rem]">{titulo}</h1>
 
-        <div className="mb-[1.5rem] flex items-center gap-[0.25rem] text-xs font-normal text-blue-700">
+        <div className="mb-[1.5rem] flex items-center gap-[0.25rem] text-xs font-normal text-blue-700 md:text-[14px] md:font-semibold">
           <h4 className="font-semibold">{autor}</h4>
           <span>•</span>
           <h4>{formatarData(dataPublicacao)}</h4>
@@ -44,10 +44,11 @@ export default function EditPost({
             text-[0.75rem] leading-relaxed text-[#2B2B2B]
             placeholder:text-[#7A8A9D]
             focus:outline-none focus:ring-2 focus:ring-blue-500
+            md:text-[16px] md:text-[#2B2B2B]
           "
         />
 
-        <div className="mt-8 flex gap-[0.75rem]">
+        <div className="mt-8 flex gap-[0.75rem] md:justify-end">
           <ButtonLarge
             background="bg-[#8C8A99]"
             title="Cancelar"
