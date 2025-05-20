@@ -1,0 +1,72 @@
+[
+	{
+		"id": 1,
+		"nome": "Joana Marques",
+		"titulo": "Entendendo Coparticipação em Planos de Saúde",
+		"data_publicacao": "12/03/2025",
+		"descricao": "Neste artigo, exploramos como funciona a coparticipação nos planos de saúde brasileiros. Entrevistas com especialistas e análises detalhadas revelam como esse modelo é estruturado e seu impacto no orçamento familiar. Também discutimos estratégias para utilizar seu plano de forma mais eficiente e econômica."
+	},
+	{
+		"id": 2,
+		"nome": "Carlos Silva",
+		"titulo": "A Evolução dos Planos de Saúde no Brasil",
+		"data_publicacao": "25/02/2025",
+		"descricao": "Os planos de saúde passaram por grandes transformações nas últimas décadas. Analisamos a evolução desde a regulamentação do setor em 1998 até os modelos atuais, explicando como as novas tecnologias e demandas sociais têm moldado o mercado de saúde suplementar e as opções disponíveis aos consumidores."
+	},
+	{
+		"id": 3,
+		"nome": "Ana Costa",
+		"titulo": "Doenças Crônicas e Cobertura de Planos",
+		"data_publicacao": "07/04/2025",
+		"descricao": "Diabetes, hipertensão, cardiopatias... Condições que demandam atenção contínua e afetam milhões de brasileiros. Este post analisa os direitos dos portadores de doenças crônicas nos planos de saúde, explicando coberturas obrigatórias, carências e como evitar problemas de negativa de atendimento."
+	},
+	{
+		"id": 4,
+		"nome": "Rafael Tavares",
+		"titulo": "Plano Empresarial vs. Plano Individual",
+		"data_publicacao": "15/03/2025",
+		"descricao": "Nem todo plano de saúde funciona da mesma forma. Aqui discutimos as diferenças essenciais entre planos empresariais e individuais — suas vantagens, limitações e particularidades contratuais. Comparamos custos, reajustes e coberturas para ajudar você a escolher a opção mais adequada para seu perfil."
+	},
+	{
+		"id": 5,
+		"nome": "Beatriz Nunes",
+		"titulo": "O Crescimento da Telemedicina nos Planos",
+		"data_publicacao": "28/01/2025",
+		"descricao": "Depois da pandemia, os atendimentos virtuais se consolidaram como opção permanente nos planos de saúde. Discutimos como esse serviço tem transformado o acesso à consultas médicas, quais especialidades têm maior adesão e como os planos estão integrando essa modalidade em suas coberturas e aplicativos."
+	},
+	{
+		"id": 6,
+		"nome": "Luiz Andrade",
+		"titulo": "Saúde Mental nos Planos de Saúde",
+		"data_publicacao": "10/02/2025",
+		"descricao": "Com o aumento da conscientização sobre saúde mental, os planos de saúde ampliaram suas coberturas nessa área. Neste artigo, indicamos quais tratamentos são obrigatórios por lei, limites de sessões terapêuticas, cobertura para internações psiquiátricas e como os diferentes planos têm abordado essa demanda crescente."
+	},
+	{
+		"id": 7,
+		"nome": "Mariana Rocha",
+		"titulo": "Operadoras que Moldaram o Mercado de Saúde",
+		"data_publicacao": "03/03/2025",
+		"descricao": "Você conhece a história por trás das grandes operadoras de saúde? Conheça as empresas que definiram o setor no Brasil, suas trajetórias, modelos de negócio inovadores e como influenciaram a regulamentação e as práticas do mercado de saúde suplementar ao longo das últimas décadas."
+	},
+	{
+		"id": 8,
+		"nome": "Thiago Moreira",
+		"titulo": "Programas de Prevenção nos Planos de Saúde",
+		"data_publicacao": "20/02/2025",
+		"descricao": "Prevenir é melhor que remediar - e mais econômico para as operadoras. Neste post, analisamos como os planos de saúde estão investindo em programas preventivos, desde check-ups periódicos até acompanhamento de gestantes e idosos. Um mergulho nas estratégias que beneficiam tanto usuários quanto empresas."
+	},
+	{
+		"id": 9,
+		"nome": "Jade Maria Soares",
+		"titulo": "O que é o SUS?",
+		"data_publicacao": "22/04/2025",
+		"descricao": "O Sistema Único de Saúde do Brasil (SUS) se tornou uma referência mundial de programa de saúde pública, mas ainda não consegue atender aos mais de 200 milhões de habitantes do país. Como solução para a alta demanda, muitos brasileiros optam por planos de saúde complementares ao sistema público."
+	},
+	{
+		"id": 10,
+		"nome": "Bruno Almeida",
+		"titulo": "Top 10 Procedimentos Mais Solicitados em Planos",
+		"data_publicacao": "30/03/2025",
+		"descricao": "Exames laboratoriais, consultas de rotina e outros procedimentos são os campeões de requisições. Neste ranking, listamos os 10 serviços médicos mais utilizados pelos beneficiários de planos de saúde. Analisamos custos médios, frequência de uso e como isso impacta o valor das mensalidades e coparticipações."
+	}
+]
