@@ -27,7 +27,7 @@ export default function PostAll({ autor, titulo, data, descricao, clamped, onCli
 
 	return (
 		<div className="">
-			<section className="flex flex-col min-w-[19.5rem] border border-[#2500FF] rounded-xl px-[1.5rem] py-[1rem] md:h-[17.5rem] xl:w-[22.12rem] xl:h-[22.37rem]">
+			<section className="flex flex-col min-w-[19.5rem] border border-[#2500FF] rounded-lg px-[1.5rem] py-[1rem] md:h-[17.5rem] lg:w-[22.12rem] lg:h-[22.37rem]">
 				<div className="pb-[.75rem] flex justify-between items-center text-[.75rem] text-[#2500FF] font-semibold">
 					<div className="flex gap-[.25rem] font-normal md:text-[.875rem]">
 						<h4>{autor}</h4>
@@ -44,7 +44,7 @@ export default function PostAll({ autor, titulo, data, descricao, clamped, onCli
 				</div>
 
 				<div>
-					<p className="mb-[.75rem] text-[#2B2B2B] text-[.875rem] md:text-[1.56rem] md:font-semibold xl:text-[1.56rem] xl:font-semibold">
+					<p className="mb-[.75rem] text-[#2B2B2B] text-[.875rem] md:text-[1.56rem] md:font-semibold lg:text-[1.56rem] lg:font-semibold">
 						{titulo}
 					</p>
 

@@ -43,7 +43,7 @@ export default function PostSmall({
 					rounded-xl
 					px-[.75rem] py-[.5rem]
 					md:px-[1.5rem] md:py-[16px]
-					xl:px-[1.5rem] xl:py-[1rem]">
+					lg:px-[1.5rem] lg:py-[1rem]">
 						
 			<div className="pb-3 flex  justify-between items-start text-[#2500FF] font-semibold text-[0.625rem]">
 				<div className="line-clamp-2 overflow-hidden flex flex-wrap items-center gap-1 leading-tight font-normal md:text-[.875rem]">
@@ -62,7 +62,7 @@ export default function PostSmall({
 			</div>
 
 			<div>
-				<p className="mb-3 text-[#2B2B2B] text-[.75rem] line-clamp-1 md:text-[1.56rem] md:font-semibold xl:text-[1.56rem] xl:font-semibold">
+				<p className="mb-3 text-[#2B2B2B] text-[.75rem] line-clamp-1 md:text-[1.56rem] md:font-semibold lg:text-[1.56rem] lg:font-semibold">
 					{titulo}
 				</p>
 				<p

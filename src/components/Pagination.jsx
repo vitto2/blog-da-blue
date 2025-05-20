@@ -14,7 +14,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 					type="button"
 					onClick={() => onPageChange(currentPage - 1)}
 					disabled={currentPage === 1}
-					className="cursor-pointer xl:pr-[21.125rem] md:pr-[3.125rem] py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
+					className="cursor-pointer lg:pr-[21.125rem] md:pr-[3.125rem] py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] lg:md:text-[1rem]">
 					Anterior
 				</button>
 			</div>
@@ -39,7 +39,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
 					type="button"
 					onClick={() => onPageChange(currentPage + 1)}
 					disabled={currentPage === totalPages}
-					className="cursor-pointer xl:pl-[21.125rem]  py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] xl:md:text-[1rem]">
+					className="cursor-pointer lg:pl-[21.125rem]  py-1 text-sm disabled:opacity-40 text-[.75rem] md:text-[.875rem] lg:md:text-[1rem]">
 					Próximo
 				</button>
 				<img src={arrowR} alt="" />

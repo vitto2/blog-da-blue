@@ -25,7 +25,7 @@ export default function EditPost({
 		<div className="flex min-h-screen w-full flex-col ">
 			<Header returnBtn />
 
-			<main className="w-full flex flex-1 flex-col px-[1.5rem] pt-[2rem] pb-8 md:px-[3.1rem] xl:px-[204px] xl:pb-[17.625rem]">
+			<main className="w-full flex flex-1 flex-col px-[1.5rem] pt-[2rem] pb-8 md:px-[3.1rem] lg:px-[204px] lg:pb-[17.625rem]">
 				<div className="flex flex-col w-full max-w-[70.5rem] mx-auto">
 					<h1 className="mb-[0.75rem] text-xl font-semibold md:text-[2.18rem]">
 						{titulo}

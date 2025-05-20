@@ -4,12 +4,10 @@ import PostSmall from "./PostSmall";
 import EmptyState from "./EmptyState";
 
 export default function Recents({ posts, setPosts }) {
-	// se não houver nenhum post, exibe fallback
 	if (posts.length === 0) {
 		return <EmptyState />;
 	}
 
-	// ordena e pega os 3 mais recentes
 	const latestPosts = [...posts]
 		.sort((a, b) => {
 			const dateB = new Date(b.data_publicacao.split("/").reverse().join("-"));
@@ -22,7 +20,6 @@ export default function Recents({ posts, setPosts }) {
 		setPosts((prev) => prev.filter((post) => post.id !== id));
 	}
 
-	// separa os dois posts menores para map
 	const smallPosts = latestPosts.slice(1, 3);
 
 	return (
@@ -42,7 +39,7 @@ export default function Recents({ posts, setPosts }) {
 					/>
 				)}
 
-				<div className="flex gap-4 flex-row md:flex-col xl:justify-between">
+				<div className="flex gap-4 flex-row md:flex-col md:justify-between">
 					{smallPosts.map((post) => (
 						<PostSmall
 							key={post.id}

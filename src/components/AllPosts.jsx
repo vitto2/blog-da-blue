@@ -30,7 +30,7 @@ export default function AllPosts({ posts, setPosts }) {
 
 	return (
 		<div className="mb-[5rem]">
-			<ul className="flex flex-col gap-[.75rem] md:flex-row xl:gap-[2rem] xl:justify-between">
+			<ul className="flex flex-col gap-[.75rem] md:flex-row lg:gap-[2rem] ">
 				{currentPosts.map((post) => (
 					<li key={post.id}>
 						<PostAll

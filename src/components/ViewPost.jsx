@@ -28,7 +28,7 @@ export default function PostView({
 		<div className="flex flex-col w-full min-h-screen">
 			<Header returnBtn />
 
-			<main className="w-full px-[1.5rem] pt-[2rem] pb-[2rem] md:px-[3.12rem] xl:px-[12.75rem]">
+			<main className="w-full px-[1.5rem] pt-[2rem] pb-[2rem] md:px-[3.12rem] lg:px-[12.75rem]">
 				<div className="w-full max-w-[70.5rem] mx-auto">
 					<div className="relative mb-[0.75rem]">
 						<h1 className="text-xl font-semibold md:text-[2.18rem]">
