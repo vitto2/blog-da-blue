@@ -4,8 +4,15 @@ import { usePosts } from "../hooks/usePost";
 import ButtonLarge from "./ButtonLarge";
 import Header from "./Header";
 import InputText from "./InputText";
+import { useNavigate } from "react-router-dom";
 
 export default function AddPost() {
+	function onReturnPostClick() {
+		navigate(`/`);
+	}
+
+	const navigate = useNavigate();
+
 	const [allPosts, setAllPosts] = usePosts();
 
 	const [nome, setNome] = useState("");
@@ -42,13 +49,6 @@ export default function AddPost() {
 		setDescricao("");
 
 		alert("Post salvo com sucesso!");
-	}
-
-	function handleCancel() {
-		setNome("");
-		setTitulo("");
-		setDataPub("");
-		setDescricao("");
 	}
 
 	return (
@@ -105,7 +105,7 @@ export default function AddPost() {
 						<ButtonLarge
 							title="Cancelar"
 							background="bg-[#8C8A99]"
-							onClick={handleCancel}
+							onClick={onReturnPostClick}
 						/>
 						<ButtonLarge
 							title="Salvar post"
