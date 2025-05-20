@@ -2,7 +2,6 @@ import editIcon from "../assets/img/edit-button_mobile.svg";
 import delet from "../assets/img/delete-button.svg";
 import ArrowIcon from "../assets/img/arrow_outward.svg";
 
-
 export default function PostSmall({
 	autor,
 	titulo,
@@ -11,10 +10,8 @@ export default function PostSmall({
 	clamped,
 	onClick,
 	onClickEdit,
-	onClickView
+	onClickView,
 }) {
-	
-
 	function formatarData(dataStr) {
 		const [dia, mes, ano] = dataStr.split("/"); // "21/08/2024"
 		const data = new Date(`${ano}-${mes}-${dia}`);
@@ -25,11 +22,11 @@ export default function PostSmall({
 			year: "numeric",
 		});
 	}
-	
 
 	return (
 		<section
 			className="
+					relative
 					w-full
 					min-w-0
 					min-h-[11.75rem]
@@ -68,7 +65,7 @@ export default function PostSmall({
 				</p>
 			</div>
 
-			<div className="flex pt-6 justify-end gap-2">
+			<div className="absolute bottom-[16px] right-[24px] left-0 flex pt-6 justify-end gap-2 ">
 				<img onClick={onClickEdit} src={editIcon} alt="editar" />
 				<img src={delet} alt="deletar" onClick={onClick} />
 			</div>
