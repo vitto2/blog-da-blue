@@ -31,8 +31,7 @@ export default function Recents({ posts, setPosts }) {
 				Posts recentes
 			</h2>
 
-			<ul className="flex flex-col md:flex-row gap-[2rem]">
-				{/* Primeiro post principal */}
+			<ul className="grid grid-cols-1 md:grid-cols-2 gap-[2rem]">
 				{latestPosts[0] && (
 					<Post
 						titulo={latestPosts[0].titulo}
@@ -43,8 +42,7 @@ export default function Recents({ posts, setPosts }) {
 					/>
 				)}
 
-				{/* Dois posts menores, renderizados dinamicamente */}
-				<div className="flex flex-row justify-between">
+				<div className="flex gap-4 flex-row md:flex-col xl:justify-between">
 					{smallPosts.map((post) => (
 						<PostSmall
 							key={post.id}

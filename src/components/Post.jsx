@@ -33,7 +33,7 @@ export default function Post({
 	}
 
 	return (
-		<section className="flex flex-col px-[1.5rem] py-[1rem] max-w-[34.25rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl xl:h-[28.12rem] md:max-w-[34.25rem] md:h-[28.125rem] xl:max-w-[34.25rem] xl:max-h-[36.37rem] justify-center">
+		<section className="flex flex-col px-[1.5rem] py-[1rem] max-w-[34.25rem] min-w-[9.25rem] border border-[#2500FF] rounded-xl md:max-w-[34.25rem] md:h-[28.125rem] xl:max-w-[34.25rem] xl:h-[36.37rem] justify-center">
 			<div className="pb-[.75rem] flex justify-between items-center text-[12px] text-[#2500FF] font-bold">
 				<div className="flex gap-[.25rem] font-normal ">
 					<h4>{autor}</h4>

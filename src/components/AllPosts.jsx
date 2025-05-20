@@ -4,7 +4,6 @@ import PostAll from "./PostAll";
 import Pagination from "./Pagination";
 import EmptyState from "./EmptyState";
 
-
 export default function AllPosts({ posts, setPosts }) {
 	const [currentPage, setCurrentPage] = useState(1);
 	const pageSize = 3;
@@ -13,7 +12,6 @@ export default function AllPosts({ posts, setPosts }) {
 		return <EmptyState />;
 	}
 
-	// ordena por data desc
 	const sorted = [...posts].sort((a, b) => {
 		const dateB = new Date(b.data_publicacao.split("/").reverse().join("-"));
 		const dateA = new Date(a.data_publicacao.split("/").reverse().join("-"));
@@ -28,12 +26,11 @@ export default function AllPosts({ posts, setPosts }) {
 
 	function handleDelete(id) {
 		setPosts((prev) => prev.filter((post) => post.id !== id));
-		// opcional: ajustar currentPage se necessário
 	}
 
 	return (
 		<div className="mb-[5rem]">
-			<ul className="flex flex-col justify-between gap-[.75rem] md:flex-row xl:gap-[2rem]">
+			<ul className="flex flex-col gap-[.75rem] md:flex-row xl:gap-[2rem] xl:justify-between">
 				{currentPosts.map((post) => (
 					<li key={post.id}>
 						<PostAll

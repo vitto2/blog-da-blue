@@ -32,11 +32,22 @@ export default function PostSmall({
 	}
 
 	return (
-		<section className="min-h-[11.75rem] max-w-[148px] md:max-w-[34.25rem] xl:max-w-[34.25rem] xl:max-h-[36.37rem] border border-[#2500FF] rounded-xl px-[.75rem] py-[.5rem] xl:px-[1.5rem] xl:py-[1rem] md:px-[24px] md:py-[16px] ">
-
+		<section
+			className="
+					w-full
+					min-w-0
+					min-h-[11.75rem]
+					md:max-w-[34.25rem]
+					md:min-h-[275px]
+					border border-[#2500FF]
+					rounded-xl
+					px-[.75rem] py-[.5rem]
+					md:px-[1.5rem] md:py-[16px]
+					xl:px-[1.5rem] xl:py-[1rem]">
+						
 			<div className="pb-3 flex  justify-between items-start text-[#2500FF] font-semibold text-[0.625rem]">
 				<div className="line-clamp-2 overflow-hidden flex flex-wrap items-center gap-1 leading-tight font-normal md:text-[.875rem]">
-					<div className="w-[140px]">
+					<div className="w-[8.75rem]">
 						<span className="whitespace-nowrap">{autor}</span>
 						<span className="mx-[1px]">•</span>
 						<span className="whitespace-nowrap">{formatarData(data)}</span>
