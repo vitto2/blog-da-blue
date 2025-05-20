@@ -1,12 +1,18 @@
 import arrow from "../assets/img/arrow_outward.svg";
 import editIcon from "../assets/img/edit-button_mobile.svg";
 import delet from "../assets/img/delete-button.svg";
-import Button from "./Button";
-import { useNavigate } from "react-router-dom";
 
-export default function PostAll({ autor, titulo, data, descricao, clamped, onClick }) {
-	const navigate = useNavigate();
 
+export default function PostAll({
+	autor,
+	titulo,
+	data,
+	descricao,
+	clamped,
+	onClick,
+	onClickEdit,
+	onClickView,
+}) {
 	function formatarData(dataStr) {
 		const [dia, mes, ano] = dataStr.split("/");
 		const parsed = new Date(`${ano}-${mes}-${dia}`);
@@ -16,13 +22,6 @@ export default function PostAll({ autor, titulo, data, descricao, clamped, onCli
 			month: "short",
 			year: "numeric",
 		});
-	}
-	function onSeePostClick() {
-		navigate(`/visualizar-post`);
-	}
-	
-	function onEditPostClick() {
-		navigate("/editar-post");
 	}
 
 	return (
@@ -36,7 +35,7 @@ export default function PostAll({ autor, titulo, data, descricao, clamped, onCli
 					</div>
 
 					<img
-						onClick={onSeePostClick}
+						onClick={onClickView}
 						src={arrow}
 						alt=""
 						className="cursor-pointer"
@@ -58,12 +57,17 @@ export default function PostAll({ autor, titulo, data, descricao, clamped, onCli
 
 				<div className="mt-auto flex pt-[1.5rem] justify-end gap-2">
 					<img
-						onClick={onEditPostClick}
+						onClick={onClickEdit}
 						src={editIcon}
 						alt="Editar"
 						className="cursor-pointer"
 					/>
-					<img src={delet} alt="Excluir" className="cursor-pointer" onClick={onClick} />
+					<img
+						src={delet}
+						alt="Excluir"
+						className="cursor-pointer"
+						onClick={onClick}
+					/>
 				</div>
 			</section>
 		</div>

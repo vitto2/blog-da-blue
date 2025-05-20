@@ -1,24 +1,60 @@
-import { useState } from "react";
+// src/components/EditPost.jsx
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { usePosts } from "../hooks/usePost";
 import Header from "./Header";
 import ButtonLarge from "./ButtonLarge";
+import EmptyState from "./EmptyState";
 
-export default function EditPost({
-	titulo = "Top 10 Screams do Cinema",
-	autor = "Bruno Almeida",
-	dataPublicacao = "30/03/2025",
-	descricao:
-		descricaoInicial = "Gritos são uma marca registrada do terror. Neste ranking, listamos as 10 performances de grito mais memoráveis da história do cinema de horror. Desde o clássico 'Psycho' até filmes modernos, analisamos a entrega dos atores e como esse elemento sonoro impacta diretamente a experiência do espectador.",
-}) {
-	// estado para o textarea
-	const [descricao, setDescricao] = useState(descricaoInicial);
+export default function EditPost() {
+	const { id } = useParams();
+	const postId = Number(id);
+	const navigate = useNavigate();
+	const [posts, setPosts] = usePosts();
 
-	function formatarData(d) {
-		const [dia, mes, ano] = d.split("/");
-		return new Date(`${ano}-${mes}-${dia}`).toLocaleDateString("pt-BR", {
-			day: "2-digit",
-			month: "short",
-			year: "numeric",
-		});
+	const [titulo, setTitulo] = useState("");
+	const [autor, setAutor] = useState("");
+	const [dataPublicacao, setDataPublicacao] = useState("");
+	const [descricao, setDescricao] = useState("");
+
+	const original = posts.find((p) => p.id === postId);
+
+	useEffect(() => {
+		if (!original) return;
+		setTitulo(original.titulo);
+		setAutor(original.nome);
+
+		const [d, m, y] = original.data_publicacao.split("/");
+		setDataPublicacao(`${y}-${m}-${d}`);
+		setDescricao(original.descricao);
+	}, [original]);
+
+	function handleCancel() {
+		navigate(-1);
+	}
+
+	function handleSave() {
+		if (!titulo || !autor || !dataPublicacao || !descricao) {
+			alert("Preencha todos os campos antes de salvar.");
+			return;
+		}
+
+		const formatted = dataPublicacao.split("-").reverse().join("/");
+		const updated = {
+			id: postId,
+			nome: autor,
+			titulo,
+			data_publicacao: formatted,
+			descricao,
+		};
+
+		setPosts((prev) => prev.map((p) => (p.id === postId ? updated : p)));
+		alert("Post atualizado com sucesso!");
+		navigate(-1);
+	}
+
+	if (!original) {
+		<EmptyState />;
 	}
 
 	return (
@@ -34,7 +70,15 @@ export default function EditPost({
 					<div className="mb-[1.5rem] flex items-center gap-[0.25rem] text-xs font-normal text-blue-700 md:text-[14px] md:font-semibold">
 						<h4 className="font-semibold">{autor}</h4>
 						<span>•</span>
-						<h4>{formatarData(dataPublicacao)}</h4>
+						<h4>
+							{new Date(
+								dataPublicacao.split("-").reverse().join("-")
+							).toLocaleDateString("pt-BR", {
+								day: "2-digit",
+								month: "short",
+								year: "numeric",
+							})}
+						</h4>
 					</div>
 
 					<textarea
@@ -46,8 +90,16 @@ export default function EditPost({
 					/>
 
 					<div className="mt-8 flex gap-[0.75rem] md:justify-end">
-						<ButtonLarge background="bg-[#8C8A99]" title="Cancelar" />
-						<ButtonLarge background="bg-[#2500FF]" title="Salvar edições" />
+						<ButtonLarge
+							background="bg-[#8C8A99]"
+							title="Cancelar"
+							onClick={handleCancel}
+						/>
+						<ButtonLarge
+							background="bg-[#2500FF]"
+							title="Salvar edições"
+							onClick={handleSave}
+						/>
 					</div>
 				</div>
 			</main>

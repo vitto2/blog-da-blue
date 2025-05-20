@@ -6,30 +6,24 @@ import Header from "./Header";
 import InputText from "./InputText";
 
 export default function AddPost() {
-	// 1) hook para ler/escrever no localStorage
-	const [allPosts, setAllPosts] = usePosts(); // :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}
+	const [allPosts, setAllPosts] = usePosts();
 
-	// 2) estados controlados para cada campo
 	const [nome, setNome] = useState("");
 	const [titulo, setTitulo] = useState("");
 	const [dataPub, setDataPub] = useState("");
 	const [descricao, setDescricao] = useState("");
 
-	// 3) função auxiliar para pegar o próximo ID
 	function getNextId() {
 		const ids = allPosts.map((p) => p.id);
 		return ids.length ? Math.max(...ids) + 1 : 1;
 	}
 
-	// 4) salvar novo post
 	function handleSave() {
-		// validação simples
 		if (!nome || !titulo || !dataPub || !descricao) {
 			alert("Preencha todos os campos antes de salvar.");
 			return;
 		}
 
-		// formata a data YYYY-MM-DD → DD/MM/YYYY
 		const formattedDate = dataPub.split("-").reverse().join("/");
 
 		const newPost = {
@@ -40,10 +34,8 @@ export default function AddPost() {
 			descricao,
 		};
 
-		// adiciona e persiste em localStorage
 		setAllPosts((prev) => [...prev, newPost]);
 
-		// limpa o form
 		setNome("");
 		setTitulo("");
 		setDataPub("");
@@ -52,7 +44,6 @@ export default function AddPost() {
 		alert("Post salvo com sucesso!");
 	}
 
-	// 5) (opcional) cancelar
 	function handleCancel() {
 		setNome("");
 		setTitulo("");
@@ -73,7 +64,6 @@ export default function AddPost() {
 						Informações do post
 					</span>
 
-					{/* Campos controlados */}
 					<div className="lg:flex justify-between gap-4">
 						<InputText
 							label="Nome"
@@ -111,17 +101,16 @@ export default function AddPost() {
 						/>
 					</div>
 
-					{/* Botões Cancelar / Salvar */}
 					<div className="flex gap-[12px] mt-[12px] lg:justify-end">
 						<ButtonLarge
 							title="Cancelar"
 							background="bg-[#8C8A99]"
-							onClick={handleCancel} // :contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}
+							onClick={handleCancel}
 						/>
 						<ButtonLarge
 							title="Salvar post"
 							background="bg-[#2500FF]"
-							onClick={handleSave} // :contentReference[oaicite:8]{index=8}:contentReference[oaicite:9]{index=9}
+							onClick={handleSave}
 						/>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
-// src/components/AllPosts.jsx
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PostAll from "./PostAll";
 import Pagination from "./Pagination";
 import EmptyState from "./EmptyState";
@@ -7,6 +7,7 @@ import EmptyState from "./EmptyState";
 export default function AllPosts({ posts, setPosts }) {
 	const [currentPage, setCurrentPage] = useState(1);
 	const pageSize = 3;
+	const navigate = useNavigate();
 
 	if (posts.length === 0) {
 		return <EmptyState />;
@@ -40,6 +41,7 @@ export default function AllPosts({ posts, setPosts }) {
 							descricao={post.descricao}
 							clamped
 							onClick={() => handleDelete(post.id)}
+							onClickView={() => navigate(`/visualizar-post/${post.id}`)}
 						/>
 					</li>
 				))}

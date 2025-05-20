@@ -1,7 +1,6 @@
 import arrow from "../assets/img/arrow_outward.svg";
 import editIcon from "../assets/img/edit-button_mobile.svg";
 import delet from "../assets/img/delete-button.svg";
-import { useNavigate } from "react-router-dom";
 
 export default function Post({
 	autor,
@@ -10,9 +9,9 @@ export default function Post({
 	descricao,
 	clamped,
 	onClick,
+	onClickEdit,
+	onClickView,
 }) {
-	const navigate = useNavigate();
-
 	function formatarData(dataStr) {
 		const [dia, mes, ano] = dataStr.split("/");
 		const parsed = new Date(`${ano}-${mes}-${dia}`);
@@ -22,14 +21,6 @@ export default function Post({
 			month: "short",
 			year: "numeric",
 		});
-	}
-
-	function onSeePostClick() {
-		navigate(`/visualizar-post`);
-	}
-
-	function onEditPostClick() {
-		navigate("/editar-post");
 	}
 
 	return (
@@ -42,7 +33,7 @@ export default function Post({
 				</div>
 
 				<img
-					onClick={onSeePostClick}
+					onClick={onClickView}
 					src={arrow}
 					alt=""
 					className="cursor-pointer"
@@ -64,7 +55,7 @@ export default function Post({
 
 			<div className="mt-auto flex pt-[1.5rem] justify-end gap-2 ">
 				<img
-					onClick={onEditPostClick}
+					onClick={onClickEdit}
 					src={editIcon}
 					alt="Editar"
 					className="cursor-pointer"

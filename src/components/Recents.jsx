@@ -2,8 +2,11 @@
 import Post from "./Post";
 import PostSmall from "./PostSmall";
 import EmptyState from "./EmptyState";
+import { useNavigate } from "react-router-dom";
 
 export default function Recents({ posts, setPosts }) {
+	const navigate = useNavigate();
+
 	if (posts.length === 0) {
 		return <EmptyState />;
 	}
@@ -36,6 +39,10 @@ export default function Recents({ posts, setPosts }) {
 						data={latestPosts[0].data_publicacao}
 						descricao={latestPosts[0].descricao}
 						onClick={() => handleDelete(latestPosts[0].id)}
+						onClickEdit={() => navigate(`/editar-post/${latestPosts[0].id}`)}
+						onClickView={() =>
+							navigate(`/visualizar-post/${latestPosts[0].id}`)
+						}
 					/>
 				)}
 
@@ -49,6 +56,8 @@ export default function Recents({ posts, setPosts }) {
 							descricao={post.descricao}
 							clamped
 							onClick={() => handleDelete(post.id)}
+							onClickEdit={() => navigate(`/editar-post/${post.id}`)}
+							onClickView={() => navigate(`/visualizar-post/${post.id}`)}
 						/>
 					))}
 				</div>
