@@ -42,6 +42,7 @@ export default function AllPosts({ posts, setPosts }) {
 							clamped
 							onClick={() => handleDelete(post.id)}
 							onClickView={() => navigate(`/visualizar-post/${post.id}`)}
+							onClickEdit={() => navigate(`/editar-post/${post.id}`)}
 						/>
 					</li>
 				))}

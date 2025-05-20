@@ -47,7 +47,7 @@ export default function Post({
 
 				<p
 					className={`text-[#7A8A9D] leading-[150%] text-[.75rem] ${
-						clamped ? "line-clamp-6 md:line-clamp-none" : ""
+						clamped ? "line-clamp-6" : ""
 					}`}>
 					{descricao}
 				</p>
