@@ -4,7 +4,7 @@ import delet from "../assets/img/delete-button.svg";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
-export default function PostAll({ autor, titulo, data, descricao, clamped }) {
+export default function PostAll({ autor, titulo, data, descricao, clamped, onClick }) {
 	const navigate = useNavigate();
 
 	function formatarData(dataStr) {
@@ -63,7 +63,7 @@ export default function PostAll({ autor, titulo, data, descricao, clamped }) {
 						alt="Editar"
 						className="cursor-pointer"
 					/>
-					<img src={delet} alt="Excluir" className="cursor-pointer" />
+					<img src={delet} alt="Excluir" className="cursor-pointer" onClick={onClick} />
 				</div>
 			</section>
 		</div>
