@@ -66,8 +66,18 @@ export default function PostSmall({
 			</div>
 
 			<div className="absolute bottom-[16px] right-[24px] left-0 flex pt-6 justify-end gap-2 ">
-				<img onClick={onClickEdit} src={editIcon} alt="editar" />
-				<img src={delet} alt="deletar" onClick={onClick} />
+				<img
+					className="cursor-pointer"
+					onClick={onClickEdit}
+					src={editIcon}
+					alt="editar"
+				/>
+				<img
+					className="cursor-pointer"
+					src={delet}
+					alt="deletar"
+					onClick={onClick}
+				/>
 			</div>
 		</section>
 	);

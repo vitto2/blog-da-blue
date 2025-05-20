@@ -12,9 +12,10 @@ export default function Header({ returnBtn }) {
 		<header className="lg:px-[12.75rem] lg:justify-center lg:items-center flex justify-between items-center px-[1.5rem] py-[.75rem] border-b border-[#D7D7D7] font-figtree md:px-[3.12rem]">
 			<div className="w-[70.5rem] flex justify-between items-center ">
 				<img
-					className="w-[2.875rem] lg:w-[3.5625rem] object-cover"
+					className="w-[2.875rem] lg:w-[3.5625rem] object-cover cursor-pointer"
 					src={logo}
 					alt="logo da blue"
+					onClick={onReturnPostClick}
 				/>
 				{returnBtn ? (
 					<span
